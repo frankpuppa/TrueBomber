@@ -7,7 +7,8 @@
 #include "SetTrap.h"
 #include "StopMove.h"
 #include <iostream>
-
+/*Input Handler Class*/
+/*Constructor will create new objects which are all the type of commands the player can perfom*/
 InputHandler::InputHandler(){
     move_up = new MoveUp();
     move_down = new MoveDown();
@@ -27,7 +28,7 @@ InputHandler::~InputHandler(){
     delete set_trap;
     delete stop_move;
 }
-
+/*This function is basically just a mapper to the keypress. Either listen on KeyUP event or KeyDown*/
 bool InputHandler::inputMap(){
 
     SDL_Event e;
@@ -93,6 +94,7 @@ void InputHandler::keydown(SDL_Event& e){
     }
 
 }
+/*On Keyup  I just update the keyboard status. So that multiple key can be pressed at the same time*/
 void InputHandler::keyup(){
 
     //Adjust the velocity
@@ -158,6 +160,7 @@ void InputHandler::updatekeystates(){
     else
 	stop_move->execute(players.at(0));
 }
+/*This function is used to set players to respectively controllers*/
 bool InputHandler::setPlayers(std::vector<Player*> * players, std::vector<int> *playerController){
       
       bool success=false;
@@ -179,6 +182,7 @@ bool InputHandler::setPlayers(std::vector<Player*> * players, std::vector<int> *
       }
     return success;
 }
+/*This function is used to handle the keypress on the menu*/
 int InputHandler::handleMenuKeys(bool * quit){
     SDL_Event e;
     int menuKey=0;
