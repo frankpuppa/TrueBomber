@@ -1,0 +1,37 @@
+#ifndef _GLOBALS_H
+#define _GLOBALS_H
+
+
+#define SCREEN_WIDTH 800
+#define SCREEN_HEIGHT 600
+#define COLUMN 17
+#define ROW 13
+#define TOFFSETX 60
+#define TOFFSETY 40
+#define TILESIZE 40
+#define GRIDWIDTH 680
+#define GRIDHEIGHT 520
+#define PLCHOICE 5
+#define EXCHOICE 4
+#define BMCHOICE 8
+#define PLAYERH 60
+#define PLAYERW 40
+#define EXPLOSIONH 40
+#define BOMBH 40
+#define BOMBW 40
+#define ITEMSIZE 40
+#define ITEMSNUM 8
+#define PLAYEROFFSETY 40
+#define PLAYEROFFSETX 20
+
+#define MAXBOMBS 10
+#define MAXPOWER 5
+#define MAXVEL 5
+#define MAXFLAME 2
+#define FPS 60
+#define BOMBSECONDS 2
+#define BOMBSPEED 3
+#define COCAINETIME 10000
+#define SPIDERWEBTIME 5000
+#define DEFAULTPLAYERNUM 2
+#endif
