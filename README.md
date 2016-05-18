@@ -14,7 +14,7 @@ In order to play the game the following library must be installed:
 ##Installation
 To install and run the game, simply install the required libraries, then clone the game into any folder. 
 run: 
-<br/>`make`
+<br/>`make`<br/>
 At the end of the compilation the TrueBomber executable file should be created.
 run: 
 <br/>`./TrueBomber`
