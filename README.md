@@ -1,5 +1,6 @@
 # Truebomber
 SDL2 Bomberman like game. Made for the Programming Module 3rd year.
+<br/>
 This has been an attempt to learn the beautiful SDL 2.0 library. The library can be used for games, drawing and many other things.
 
 ##Requirements:
