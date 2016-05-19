@@ -43,6 +43,9 @@ class Map
         void handleBombMovementUp(int, int, Bomb *b);
         void handleBombMovementDown(int, int,Bomb *b);
         bool bombCollidePlayer(Bomb*,Player*);
+	
+	void removeFireX(int,int,int);
+	void removeFireY(int,int,int);
 
 
     private:

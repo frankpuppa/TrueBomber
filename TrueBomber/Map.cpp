@@ -385,6 +385,7 @@ void Map::checkRangeEx(int y, int x){
     handleExY(y,x,start,end,playerExplosion);
     if(tileptr[y][x].explosion_finish()){
         checkBoxesY(x,start,end);
+	removeFireY(x,start,end);
     }
 
     start=-1;
@@ -426,6 +427,7 @@ void Map::checkRangeEx(int y, int x){
     handleExX(y,x,start,end,playerExplosion);
     if(tileptr[y][x].explosion_finish()){
         checkBoxesX(y,start,end);
+	removeFireX(y,start,end);
         // explosionSrc.y=80; //reset flame
         tileptr[y][x].set_explosion_end(false);
         tileptr[y][x].setExplosion(false);
@@ -439,7 +441,7 @@ void Map::handleExY(int y,int x, int start, int end, Player* playerExplosion){
     int power=playerExplosion->getPower();
 
     for(int i=start; i<=end; i++){
-
+	  tileptr[i][x].setFire(true);
         if(tileptr[i][x].hasbomb())
             checkNeighbour(i,x);
 
@@ -475,6 +477,7 @@ void Map::handleExX(int y,int x, int start, int end, Player* playerExplosion){
     int power=playerExplosion->getPower();
 
     for(int i=start; i<=end; i++){
+	  tileptr[y][i].setFire(true);
         if(tileptr[y][i].hasbomb())
             checkNeighbour(y,i);
 
@@ -725,4 +728,13 @@ bool Map::bombCollidePlayer(Bomb* b, Player *p){
     return false;
 
 }
-
+void Map::removeFireX(int y,int start,int end){
+  for(int i=start; i<=end; i++){
+    tileptr[y][i].setFire(false);
+  }
+}
+void Map::removeFireY(int x,int start,int end){
+  for(int i=start; i<=end; i++){
+    tileptr[i][x].setFire(false);
+  }
+}

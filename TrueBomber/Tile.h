@@ -60,6 +60,8 @@ class Tile
         void removeTrap();
         void deleteTrapPointer();
         Trap* getTrapPointer();
+	void setFire(bool);
+	bool getFire();
 
     private:
         int mPosX;
@@ -71,6 +73,7 @@ class Tile
         bool endexplosion;
         bool item;
         Bomb* bombPtr;
+	bool fire;
         bool explosion;
         int counter;
         Player *player;

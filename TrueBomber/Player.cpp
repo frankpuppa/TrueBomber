@@ -89,6 +89,10 @@ void Player::move(){
     if(currentTile->getTrapPointer()){
         checkSetTrapped();
     }
+    if(currentTile->getFire()){
+      setDead(true);
+      return;
+    }
 
     if(direction==1){
         checkCollision(cellX,cellY);

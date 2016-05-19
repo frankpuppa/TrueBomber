@@ -16,6 +16,7 @@ Tile:: Tile(){
     item=false;
     playeronTile=false;
     trapPtr=NULL;
+    fire=false;
 }
 Tile::~Tile()
 {
@@ -147,4 +148,10 @@ void Tile::deleteTrapPointer(){
         std::cout<<"Delete Trap"<<std::endl;
         trapPtr=NULL;
     }
+}
+bool Tile::getFire(){
+  return fire;
+}
+void Tile::setFire(bool f){
+  fire=f;
 }
