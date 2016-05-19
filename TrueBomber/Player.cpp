@@ -299,6 +299,7 @@ void Player::pickUpItem(){
         case 5:
             Sound::soundHandler(2);
             spidertrap=true;
+	    stoned=false;
 	    removeCocaineTimer();
             break;
         case 6:

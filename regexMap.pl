@@ -2,7 +2,8 @@
 use strict;
 use warnings;
 use boolean;
-
+#Author: Francesco
+#Description: This script was used for testing the validity of the map files stored inside the maps directory of the game. Like I have explained in the report, this script was simply used for testing. The code was then converted in C++ and included in the source code of the Game within the MapfilesHandler class.
 
 my @array;
 foreach my$name(@ARGV){
