@@ -127,7 +127,9 @@ bool MapHandler::check_regex(std::string filename){
             }
             if(std::regex_match(map.at(i), re)){
                 continue;
-            }
+            }else{
+	      break;
+	    }
 
         }else{
         
@@ -153,10 +155,9 @@ offset=indexstop-indexstart;
 	    success=true;
             //std::string t(filename);
             //finalmaps.push_back(t);
-        }else{
-            std::cout<<"Map: "<<filename<<" is not valid, error found at "<<linenumber<<"\n";
-	    success=false;
-	}
+        }
+    }else{
+      std::cout<<"Map: "<<filename<<" is not valid, error found at "<<linenumber<<"\n";
     }
     return success;
 }

@@ -62,8 +62,9 @@ if($startpattern && $stoppattern){
     my $offset=$indexstop - $indexstart;
     if($offset >= 8 && $offset <=12){
         print "Map is Valid\n";
-    }else{
-        print "Map is not valid error found in line: $linenumber\n";
     }
+
+}else{
+  print "Map is not valid error found in line: $linenumber\n";
 }
 }
