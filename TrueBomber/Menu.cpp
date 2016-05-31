@@ -702,6 +702,10 @@ void Menu::setupControllers(){
       y+=60;
     }
     pointerRect=&ControllerDestR[0];
+    
+    /*reset controllers to default*/
+    playerControllerConfig.at(0)=1;
+    playerControllerConfig.at(1)=2;
 }
 /*This function frees the dynamic allocated resources used for displaying the controllers in menu 6*/
 void Menu::freeControllers(){
